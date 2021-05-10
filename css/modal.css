@@ -37,14 +37,14 @@ body {
   padding: 20px;
 
 }
-#left_side{
+#left{
   /*background-color: orange;*/
 }
-#right_side{
+#right{
   /*background-color: blue;*/
 }
 
-.pint_mock_icon_container{
+.icon_pint_container{
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -55,18 +55,18 @@ body {
   cursor:pointer;
   flex-shrink: 0;
 }
-.pint_mock_icon{
+.icon_pint{
   width: 50%;
 }
 
-.section1{
+.section_1{
   width: 100%;
   height: 8%;
   /*background-color: purple;*/
   align-items: center;
 }
 
-.section2{
+.section_2{
 
   padding-right: 5px;
   padding-left: 5px:
@@ -81,7 +81,7 @@ body {
 }
 
 
-.section3{
+.section_3{
   width: 100%;
   height: 12%;
   /*background-color: firebrick;*/
@@ -90,28 +90,28 @@ body {
   justify-content: center;
   align-items: center;
 }
-#left_side .section1 .pint_mock_icon_container{
+#left .section_1 .icon_pint_container{
   width:40px;
   height: 40px;
   background-color: rgba(239,239,239,0);
   transition-duration: 0.3s;
 }
-#left_side .section1 .pint_mock_icon_container:hover{
+#left .section_1 .icon_pint_container:hover{
   background-color: rgba(239,239,239,1)
 }
-#left_side .section2 #upload_img_label {
+#left .section_2 #img_upload_label {
   width: 100%;
   height:100%;
   cursor: pointer;
 
 }
-#left_side .section2 #upload_img_label input{
+#left .section_2 #img_upload_label input{
   width:0px;
   height:0px;
   opacity:0;
 }
 
-#left_side .section2 #upload_img_label .upload_img_container{
+#left .section_2 #img_upload_label .img_upload_container{
 
   width: 100%;
   height:100%;
@@ -123,7 +123,7 @@ body {
   align-items: center;
   text-align: center;
 }
-#left_side .section2  #upload_img_label .upload_img_container .dotted_border{
+#left .section_2  #img_upload_label .img_upload_container .dotted_border{
   width:96%;
   height:96%;
   border-radius: 8px;
@@ -136,11 +136,11 @@ body {
 
 }
 
-#left_side .section2 .pint_mock_icon_container{
+#left .section_2 .icon_pint_container{
   background-color: #767676
 }
 
-#left_side .section3 .save_from_site{
+#left .section_3 .site_save{
   width:340px;
   height: 48px;
   border-radius: 22px;
@@ -151,7 +151,6 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
-
 .modals_pin{
   position: relative;
   overflow: hidden;
@@ -163,7 +162,7 @@ body {
 
 }
 
-.pin_image{
+.image_pin{
   width:100%;
   height: 100%;
   display: flex;
@@ -171,50 +170,49 @@ body {
   align-items: center;
 }
 
-/*.pin_image img{
+
+/*.image_pin img{
   max-height:100%;
 }*/
-.pin_max_width{
-  max-width: 100%
-
-}
 .pin_max_height{
   max-height:100%;
 }
 
-#right_side .section1 {
+.pin_max_width{
+  max-width: 100%
+
+}
+
+
+#right .section_1 {
   display:flex;
   justify-content:flex-end;
 }
 
-#right_side .section1 .select_size{
+#right .section_1 .select_size{
   width: 236px;
   height: 40px;
   display: flex;
 
 }
-
-#right_side .section1 .select_size select {
+#right .section_1 .select_size select {
   width: 70%;
   height: 100%;
   border:none;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   outline: none;
-
   font-size: 16px;
-
-
   background-color: #efefef;
-
+  color: grey;
 }
-#right_side .section1 .select_size .save_pin{
+
+#right .section_1 .select_size .pin_save{
   width: 30%;
   height: 100%;
   background-color: #e60023;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,14 +223,13 @@ body {
   cursor: pointer;
 }
 
-#right_side .section2 .new_pin_input{
+#right .section_2 .new_pin_input{
   width:100%;
   height:50px;
   border: none;
   border-bottom: 2px solid #c6c6c6;
   margin-bottom: 20px;
   outline: none;
-
   font-size: 16px;
   background-color: transparent;
 }

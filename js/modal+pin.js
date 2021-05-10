@@ -1,3 +1,17 @@
+
+const add_pin_modal = document.querySelector('.add_pin_modal')
+document.querySelector('.add_pin').addEventListener('click', () => {
+  add_pin_modal.style.opacity = 1;
+  add_pin_modal.style.pointerEvents = 'all'
+
+});
+document.querySelector('add_pin_modal').addEventListener('click', event => {
+  if (event.target === add_pin_modal){
+    reset_modal();
+
+  }
+})
+
 let image_pin_blob = null;
 
 document.querySelector('#img_upload').addEventListener('change', event => {
@@ -52,4 +66,22 @@ document.querySelector('.pin_save').addEventListener('click', () => {
     img_blob: image_pin_blob ,
     pin_size: document.querySelector('#pin_size').value,
   }
-}); 
+});
+
+function reset_modal() {
+  const modals_pin = document.querySelector('add_pin_modal .modals_pin');
+
+  add_pin_modal.style.opacity = 0;
+  add_pin_modal.style.pointerEvents = 'none';
+
+  if (modals_pin.children[0].children[0])
+    modal_pin.children.removeChild(modals_pin.children[0].children[0]);
+    document.querySelector('#title_pin').value = '';
+    document.querySelector('#destination').value = '';
+    document.querySelector('#pin_size').value = '';
+    image_pin_blob = null;
+
+
+
+
+}
