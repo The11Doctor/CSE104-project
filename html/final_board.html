@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/pin.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/modal+pin.css">
+    <link rel="stylesheet" href="../css/final_board.css">
+    <script src="../js/final_board.js" defer></script>
+</head>
+
+<body>
+  <div class="nav_bar">
+    <div class="icon_pint_container">
+      <img src="../images/icons/plus.png" alt="add_pin" class= "icon_pint">
+    </div>
+  </div>
+
+  <div class="pin_container"></div>
+
+  <div class="add_pin_modal">
+    <div class="add_pin_container">
+      <div class="side" id="left">
+        <div class="section_1">
+          <div class="icon_pint_container">
+            <img src="../images/icons/ellipse.png" alt="edit" class="icon_pint">
+          </div>
+        </div>
+
+        <div class="section_2">
+          <label for="img_upload">
+            <div class="img_upload_container">
+              <div class="dotted_border">
+                <div class="icon_pint_container">
+                  <img src="../images/icons/arrow.png" alt="img_upload" class="icon_pint">
+                </div>
+                <div> Click to upload </div>
+                <div>Recommendation: Use high-quality files (.jpg )</div>
+              </div>
+
+            </div>
+            <input type="file" name="img_upload" id="img_upload">
+          </label>
+
+          <div class="modals_pin">
+            <div class="image_pin">
+             </div>
+            </div>
+
+          </div>
+          <div class="section_3">
+            <div class="site_save"> Save from site </div>
+            </div>
+          </div>
+
+
+          <div class="side" id="right">
+            <div class="section_1">
+              <div class="select_size">
+                <select id="pin_size" name="pin_size">
+                  <option value=""disabled selection>Select</option>
+                  <option value="small">small</option>
+                  <option value="medium">medium</option>
+                  <option value="large">large</option>
+                </select>
+
+                <div class="pin_save">Save  </div>
+              </div>
+
+            </div>
+
+            <div class="section_2">
+              <input placeholder= "Add your title" type="text" id="new_pin_input" class="new_pin_input">
+              <input placeholder="Whats your pin about?" type="text" class="new_pin_input" id="description_pin">
+              <input placeholder="Which album?" type="text" class="new_pin_input" id="destination_pin">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
