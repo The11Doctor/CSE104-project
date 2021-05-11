@@ -78,7 +78,7 @@ function create_pin(details){
     
     new_image.onload = function () {
         new_pin.classList.add('card');
-        new_pin.classList.add(`card_${details.pin_size}`)
+        new_pin.classList.add(`card_${details.pin_size}`);
         new_image.classList.add('pin_max_width');
         new_pin.innerHTML = `<div class ="title_pin">${details.title}</div>
     <div class ="modal_pin">

@@ -12,9 +12,11 @@
   height: 0px;
   opacity: 0;
 }
+
 .modal_pin:hover {
   opacity: 1;
 }
+
 .modal_pin {
   width:100%;
   height: 100%;
@@ -28,7 +30,6 @@
 
   opacity: 0;
   transition-duration: 0.3s;
-
 }
 
 .modal_pin .modal_head {
@@ -65,8 +66,8 @@
   color: white;
   background-color: #ff0000;
   cursor:pointer;
-
 }
+
 .icon_pint{
   width: 50%;
 }
@@ -104,10 +105,10 @@
   max-height: 100%;
 } */
 
-.image_pin{
+/* .image_pin{
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
