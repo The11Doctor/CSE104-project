@@ -50,4 +50,4 @@ document.querySelector(".pin_save").addEventListener('click', () => {
         pin_size: document.querySelector("#pin_size").value
     }
     console.log(users_data);
-})
+}) 

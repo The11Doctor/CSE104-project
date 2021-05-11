@@ -1,5 +1,3 @@
-
-
 document.querySelector('#picture').addEventListener('change', event => {
     if (event.target.files && event.target.files[0]) {
         if (/image\/*/.test(event.target.files[0].type)){
@@ -12,5 +10,4 @@ document.querySelector('#picture').addEventListener('change', event => {
         }
     }
     document.querySelector('#picture').value = '';
-
 });
