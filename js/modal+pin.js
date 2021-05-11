@@ -13,113 +13,112 @@ document.querySelector('.add_pin_modal').addEventListener('click', event => {
 });
 
 
-let image_pin_blob = null;
+let pin_image_blob = null;
 
 document.querySelector('#img_upload').addEventListener('change', event => {
     if (event.target.files && event.target.files[0]) {
         if (/image\/*/.test(event.target.files[0].type)){
             const reader = new FileReader();
-
-
+            
             reader.onload = function(){
-              const new_image = new Image();
-              image_pin_blob = reader.result;
-              new_image.src = reader.result;
+                const new_image = new Image();
 
-              new_image.onload = function() {
-                const modals_pin = document.querySelector('.add_pin_modal .modals_pin');
+                new_image.src = reader.result;
+                pin_image_blob = reader.result;
 
-                new_image.classList.add('pin_max_width');
+                new_image.onload = function() {
+                    const modals_pin = document.querySelector(".add_pin_modal .modals_pin");
 
+                    new_image.classList.add('pin_max_width');
 
+                    document.querySelector('.add_pin_modal .image_pin').appendChild(new_image);
+                    document.querySelector('#img_upload_label').style.display = 'none';
 
-                document.querySelector('.add_pin_modal .image_pin').appendChild(new_image);
-                document.querySelector('#img_upload_label').style.display = 'none';
+                    modals_pin.style.display = 'block';
 
-                 modals_pin.style.display = 'block';
+                    if (
+                        new_image.getBoundingClientRect().width < new_image.parentElement.getBoundingClientRect().width ||
+                        new_image.getBoundingClientRect().height < new_image.parentElement.getBoundingClientRect().height
+                        ) {
+                            new_image.classList.remove('pin_max_width');
+                            new_image.classList.add('pin_max_height');     
+                    }
 
-                 if (
-                    new_image.getBoundingClientRect().width < new_image.parentElement.getBoundingClientRect().width ||
-                    new_image.getBoundingClientRect().height < new_image.parentElement.getBoundingClientRect().height
-                 ) {
-                    new_image.classList.add('pin_max_height');
-                    new_image.classList.remove('pin_max_width');
-                 }
+                    modals_pin.style.opacity = 1;
+                }
 
-                 modals_pin.style.opacity = 1;
-
-              }
             }
             reader.readAsDataURL(event.target.files[0]);
         }
     }
     document.querySelector('#img_upload').value = '';
-
 });
 
-document.querySelector('.pin_save').addEventListener('click', () => {
-  const users_data = {
-    author:'BOSEY',
-    board:'default',
-    title: document.querySelector('#title_pin').value,
-    description: document.querySelector('#destination_pin').value,
-    title: document.querySelector('#destination_pin').value,
-    img_blob: image_pin_blob ,
-    pin_size: document.querySelector('#pin_size').value,
-  }
-  create_pin(users_data);
-  m_reset();
-});
-
-function create_pin(details){
-  const new_pin = document.createElement('DIV');
-const new_image = new Image();
-
-new_image.src = pin_details.img_blob;
-new_pin.style.opacity = 0;
-
-new_image.onload = function () {
-    new_pin.classList.add('card');
-    new_image.classList.add('pin_max_width');
-
-    new_pin.innerHTML = `<div class="pin_title">${pin_details.title}</div>
-<div class="pin_modal">
-<div class="modal_head">
-    <div class="save_card">Save</div>
-</div>
-<div class="modal_foot">
-    <div class="destination">
-        <div class="pint_mock_icon_container">
-            <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-        </div>
-        <span>${pin_details.destination}</span>
-    </div>
-    <div class="pint_mock_icon_container">
-        <img src="../images/send.png" alt="send" class="pint_mock_icon">
-    </div>
-    <div class="pint_mock_icon_container">
-        <img src="../images/ellipse.png" alt="edit" class="pint_mock_icon">
-    </div>
-</div>
-</div>
-<div class="pin_image">
-</div>`;
-
-    document.querySelector('.pin_container').appendChild(new_pin);
-    new_pin.children[2].appendChild(new_image);
-
-    if (
-        new_image.getBoundingClientRect().width < new_image.parentElement.getBoundingClientRect().width ||
-        new_image.getBoundingClientRect().height < new_image.parentElement.getBoundingClientRect().height
-    ) {
-        new_image.classList.remove('pin_max_width');
-        new_image.classList.add('pin_max_height');
+document.querySelector(".pin_save").addEventListener('click', () => {
+    const users_data = {
+        author: 'Johana',
+        board: 'default',
+        title: document.querySelector('#pin_title').value,
+        description: document.querySelector('#description_pin').value,
+        destination: document.querySelector('#destination_pin').value,
+        img_blob: pin_image_blob,
+        pin_size: document.querySelector("#pin_size").value
     }
+    create_pin(users_data);
+    m_reset();
+});
 
-    new_pin.style.opacity = 1;
-}
-}
+ 
+function create_pin(details){
+    const new_pin = document.createElement('DIV');
+    const new_image = new Image();
 
+    new_image.src = details.img_blob;
+    new_pin.style.opacity = 0;
+    
+    new_image.onload = function () {
+        new_pin.classList.add('card');
+        new_image.classList.add('pin_max_width');
+        new_pin.innerHTML = `<div class ="title_pin">${details.title}</div>
+    <div class ="modal_pin">
+        <div class ="modal_head">
+            <div class ="save_card"> Save </div>
+        </div>
+
+        <div class ="modal_foot">
+            <div class ="destination">
+                <div class ="icon_pint_container">
+                    <img src="../images/icons/upper-right-arrow.png" alt= "destination" class= "icon_pint" >
+                </div>
+                <span>${details.destination}</span>
+            </div>
+
+            <div class = "icon_pint_container">
+                <img src="../images/icons/send.png" alt= "send" class="icon_pint" >
+            </div>
+
+            <div class = "icon_pint_container">
+                <img src="../images/icons/ellipse.png" alt= "edit" class= "icon_pint" >
+            </div>
+        </div>
+    </div>
+
+    <div class = image_pin>
+    </div>`;
+
+        document.querySelector('.container_pin').appendChild(new_pin);
+        new_pin.children[2].appendChild(new_image);
+
+        if (
+            new_image.getBoundingClientRect().width < new_image.parentElement.getBoundingClientRect().width ||
+            new_image.getBoundingClientRect().height < new_image.parentElement.getBoundingClientRect().height
+        ) {
+            new_image.classList.remove('pin_max_width');
+            new_image.classList.add('pin_max_height');     
+        }
+        new_pin.style.opacity = 1;
+    }
+}
 
 function m_reset() {
     const modals_pin = document.querySelector('.add_pin_modal .modals_pin');
