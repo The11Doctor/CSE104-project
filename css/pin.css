@@ -1,11 +1,13 @@
-/* .card{
+.card{
+  top: 10%;
+  margin-left: 10%;
   position: relative;
   overflow: hidden;
-  width: 236px;
-  height: 472px;
-  background-color: green;
+  width: 400px;
+  height: 590px;
   border-radius: 16px;
-} */
+  display: inline-block;
+}
 
 .title_pin{
   width:0px;
@@ -17,12 +19,17 @@
   opacity: 1;
 }
 
+.card:hover .description_box {
+  display: flex;
+  opacity: 1;
+}
+
 .modal_pin {
-  width:100%;
+  width:60%;
   height: 100%;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
 
   z-index: 9999;
@@ -46,7 +53,7 @@
   width: 100%;
   height: 15%;
   position: fixed;
-  bottom: 0;
+  bottom: 17%;
   display: flex;
   justify-content: space-evenly ;
   align-items: center;
@@ -60,8 +67,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-size: 16px;
   font-weight: 600;
+
   color: white;
   background-color: rgba(0.0.0.1);
   cursor:pointer;
@@ -83,28 +92,9 @@
   flex-shrink: 0;
 }
 
-/*.modal_pin .modal_foot .destination span{
+.modal_pin .modal_foot .destination span{
   overflow: hidden;
 }
-.modal_pin .modal_foot .destination span:hover{
-  opacity:0;
-}
-
-.nicelittlebox {
-  position: absolute;
-  color: rgba(0.0.0.1);
-  width: 60px;
-  height: 60px;
-  border-radius: 6px;
-  background-color: black;
-  display: none;
-}
-
-.modal_pin .modal_foot .destination span:hover + .nicelittlebox {
-  display: block;
-
-}
-*/
 
 .modal_pin .modal_foot .destination{
   width: 132px;
@@ -119,14 +109,55 @@
   font-weight: 700;
 
 }
-/* .image_pin img{
+.image_pin img{
   max-height: 100%;
-} */
+} 
 
-/* .image_pin{
-  width: 100%;
-  height: 100%;
+.image_pin{
+  width: 60%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+  background-color: green;
+  border-radius: 16px;
+}
+
+.description_box{
+  width: 60%;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  display: none;
+  opacity: 0;
+  background-color: #EFEFEF;
+}
+
+.description_text{
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  font-size: normal;
+}
+
+.description_box p {
+  font-size: smaller;
+  font-style: italic;
+  align-items: left;
+  justify-content: left;
+}
+
+.comments_section{
+  opacity: 0;
+  float: right;
+  width: 33%;
+  height: 75%;
+  padding: 10px;
+  background-color: whitesmoke;
+  border-radius: 16px;
+}
+
+
+ 

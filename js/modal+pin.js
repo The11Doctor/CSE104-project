@@ -1,5 +1,19 @@
 
 const add_pin_modal = document.querySelector('.add_pin_modal');
+document.querySelector(".preview_button").addEventListener('click', () => {
+    const users_data = {
+        author: document.querySelector('#authors_name').value,
+        board: 'default',
+        title: document.querySelector('#pin_title').value,
+        description: document.querySelector('#description_pin').value,
+        collection: document.querySelector('#destination_pin').value,
+        img_blob: pin_image_blob,
+        pin_size: document.querySelector("#pin_size").value
+    };
+    create_preview(users_data);
+
+});
+
 
 document.querySelector('.add_pin').addEventListener('click', () => {
     add_pin_modal.style.opacity = 1;
@@ -78,6 +92,7 @@ function create_pin(details){
     
     new_image.onload = function () {
         new_pin.classList.add('card');
+        new_pin.classList.add(`card_${details.pin_size}`);
         new_image.classList.add('pin_max_width');
         new_pin.innerHTML = `<div class ="title_pin">${details.title}</div>
     <div class ="modal_pin">
@@ -136,3 +151,14 @@ function m_reset() {
     document.querySelector('#pin_size').value = '';
     pin_image_blob = null;
 }
+
+function create_preview(details) {
+    const preview = document.createElement('DIV');
+    preview.innerHTML = `This pin is about ${details.description}. <br> It is part of the author's ${details.collection} collection.
+    <p>This pin was made by ${details.author}</p>`;
+    console.log(`This pin was made by ${details.author}`);
+    preview.classList.add('.preview_text');
+    document.querySelector('.preview').removeChild(document.querySelector('.pre_preview'));
+    document.querySelector('.preview').style.width = '280px'
+    document.querySelector('.preview').appendChild(preview)
+};
