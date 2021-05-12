@@ -9,7 +9,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    /* background-color: #1e1e1e; */
+    background: url(../images/pictures/fond_jaune.png);    /* background-color: #1e1e1e; */
 }
 
 body, div {
