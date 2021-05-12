@@ -53,18 +53,17 @@
 }
  .modal_pin .modal_head .save_card{
   margin-right: 20px;
-  width: 53px;
-  height:40px;
-  border-radius: 22px;
+  width: 40px;
+  height:38px;
+  border-radius: 20px;
+  border: 1px rgba(0.0.0.0,1);
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-size: 16px;
-  font-weight: 700;
-
+  font-weight: 600;
   color: white;
-  background-color: #ff0000;
+  background-color: rgba(0.0.0.1);
   cursor:pointer;
 }
 
@@ -84,9 +83,28 @@
   flex-shrink: 0;
 }
 
-.modal_pin .modal_foot .destination span{
+/*.modal_pin .modal_foot .destination span{
   overflow: hidden;
 }
+.modal_pin .modal_foot .destination span:hover{
+  opacity:0;
+}
+
+.nicelittlebox {
+  position: absolute;
+  color: rgba(0.0.0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: black;
+  display: none;
+}
+
+.modal_pin .modal_foot .destination span:hover + .nicelittlebox {
+  display: block;
+
+}
+*/
 
 .modal_pin .modal_foot .destination{
   width: 132px;

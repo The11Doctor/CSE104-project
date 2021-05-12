@@ -43,7 +43,7 @@
   opacity: 0;
   pointer-events: none;
   transition-duration: 0.4s;
-  
+
 }
 
 .container_pin {
@@ -81,7 +81,7 @@
 }
 
 .explanation_text{
-  background-color: purple;
+  background-color: rgba(0.0.0.1);
   border-radius: 16px;
   padding: 5px;
 }
