@@ -1,10 +1,10 @@
 :root {
-  --card_width: 250px;
+  --card_width: 400px;
   --row_increment: 10px;
   --card_border_radius: 16px;
-  --card_small: 33;
+  --card_small: 26;
   --card_medium: 42;
-  --card_large: 57;
+  --card_large: 52;
 }
 
 .card {
@@ -89,3 +89,8 @@
 .explanation_text p{
   color: whitesmoke;
 }
+
+.image_pin img{
+  width: 220px;
+}
+

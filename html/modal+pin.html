@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/modal+pin.css">
     <!-- <link rel="stylesheet" href="../css/final_board.css"> -->
-    <script src="../js/modal+pin.js" defer></script>
+    <!-- <script src="../js/modal+pin.js" defer></script> -->
   </head>
 
   <body>
@@ -34,7 +34,64 @@
     </div>
     
     <div class="container_pin">
-      <div class="card card_small">
+      <div class ="card card_large">
+         <div class ="title_pin"></div>
+         <aside class="comments_section">
+            <h1>Last comments</h1>
+            <div class="comments">
+              <span>I love your post !</span>
+            </div>
+            <div class="add_comment">
+               <input type="text" placeholder="Add a comment" id="new_comment">
+            </div>
+            <div class="close_button">
+               Close
+            </div>
+         </aside>
+         <div class ="modal_pin">
+            <div class ="modal_head">
+               <div class ="save_card"> Save </div>
+            </div>
+            <div class ="modal_foot">
+               <div class ="destination">
+                  <div class ="icon_pint_container">
+                     <img src="../images/icons/upper-right-arrow.png" alt= "destination" class= "icon_pint" >
+                  </div>
+                  <span> Eatery </span>
+               </div>
+
+               <div class = "icon_pint_container">
+                  <img src="../images/icons/send.png" alt= "send" class="icon_pint" id="send" >
+               </div>
+
+               <div class = "icon_pint_container">
+                  <img src="../images/icons/ellipse.png" alt= "edit" class= "icon_pint" id ="dots">
+               </div>
+
+               <select name="size_choice" id="size_choice">
+                  <option value="" disabled selected>Select</option>
+                  <option value="small" selected>Small</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="large" selected>Large</option>
+                </select>
+            </div>
+         </div>
+
+        <div class = image_pin>
+           <img src ="../images/pictures/pretty.jpg" alt ="image_pin" style="width: 230px;">
+        </div>
+
+        <div class="description_box description_box_large">
+           <div class="description_text">
+              This pin is about lalal.<br>
+              It is part of the author's lala collection.
+              <p>This pin was made by lalalal</p>
+           </div>
+        </div>
+     </div>
+
+
+      <!-- <div class="card card_small">
         <div class = image_pin>
           <img src ="../images/pictures/china.jpg" alt ="image_pin">
         </div>
@@ -48,7 +105,7 @@
         <div class = image_pin>
           <img src ="../images/pictures/pretty.jpg" alt ="image_pin">
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="add_pin_modal">
@@ -103,12 +160,13 @@
             <input type="text" placeholder="What is this pin about?" class="new_pin_input" id='description_pin'>
             <input  type="text" placeholder="Where do you want your pin to go?" class="new_pin_input" id='destination_pin'>
             <input type="text" placeholder="Enter your name" class="new_pin_input" id="authors_name">
-        </div>
-        <div class="section3">
-            <div class="preview_button">Preview</div> 
-        </div>     
+          </div>
+          <div class="section3">
+              <div class="preview_button">Preview</div> 
+          </div>     
         </div>
       </div>
     </div>
+    <script src="../js/modal+pin.js" defer></script>
   </body>
 </html>

@@ -1,29 +1,30 @@
 
 <html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="../js/pin.js" defer></script>
+      <link rel="stylesheet" href="../css/pin.css">
+      <link rel="stylesheet" href="../css/general.css">
+      <title> Photowebsite  </title>
+   </head>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../js/pin.js" defer></script>
-        <link rel="stylesheet" href="../css/pin.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <title> Photowebsite  </title>
-    </head>
-
-    <body>
+   <body>
       <input type="file" name="picture" id="picture">
-
-      <div class ="card">
+      <div class ="card card_large">
          <div class ="title_pin"></div>
          <aside class="comments_section">
+            <h1>Last comments</h1>
             <div class="comments">
-               <h1>Last comments</h1>
                <span>"I love your post !"</span>
             </div>
             <div class="add_comment">
-               <input type="text" placeholder="Add a comment, then press Enter" id="new_comment">
+               <input type="text" placeholder="Add a comment" id="new_comment">
             </div>
-         </aside>
+            <div class="close_button">
+               Close
+            </div>
+         </aside> 
          <div class ="modal_pin">
             <div class ="modal_head">
                <div class ="save_card"> Save </div>
@@ -41,22 +42,30 @@
                </div>
 
                <div class = "icon_pint_container">
-                  <img src="../images/icons/ellipse.png" alt= "edit" class= "icon_pint" >
+                  <img src="../images/icons/ellipse.png" alt= "edit" class= "icon_pint" id = 'dots' >
                </div>
+
+               <select name="size_choice" id="size_choice">
+                  <option value="" disabled selected>Select</option>
+                  <option value="small" selected>Small</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="large" selected>Large</option>
+                  </select>
             </div>
          </div>
 
-        <div class = image_pin>
-           <img src ="" alt ="image_pin">
-        </div>
+         <div class = image_pin>
+            <img src ="" alt ="image_pin">
+         </div>
+         <div class="description_box">
+            <div class="description_text">
+               This pin is about lalal.<br>
+               It is part of the author's lala collection.
+               <p>This pin was made by lalalal</p>
+            </div>
+         </div>
 
-        <div class="description_box">
-           <div class="description_text">
-              This pin is about lalal.<br>
-              It is part of the author's lala collection.
-              <p>This pin was made by lalalal</p>
-           </div>
-        </div>
-     </div>
+      </div>
+
    </body>
 </html> 
