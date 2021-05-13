@@ -71,16 +71,16 @@ document.querySelector(".pin_save").addEventListener('click', () => {
         board: 'default',
         title: document.querySelector('#pin_title').value,
         description: document.querySelector('#description_pin').value,
-        destination: document.querySelector('#destination_pin').value,
+        collection: document.querySelector('#destination_pin').value,
         img_blob: pin_image_blob,
         pin_size: document.querySelector("#pin_size").value
     }
     create_pin(users_data);
     m_reset();
     const section3 = add_pin_modal.children[0].children[0].children[1];
-    console.log(section3);
-    section3.children[0].removeChild(section3.children[0].children[1]);
-    section3.children[0].children[0].style.opacity = 1;
+    console.log(users_data.img_blob);
+    section3.children[0].removeChild(section3.children[0].children[0]);
+    section3.children[0].children[0].style.display = "flex";
 });
  
 function create_pin(details){
@@ -98,10 +98,10 @@ function create_pin(details){
     <aside class="comments_section">
         <h1>Last comments</h1>
         <div class="comments">
-            <span>"I love your post !"</span>
+            <span>I love your post !</span>
         </div>
         <div class="add_comment">
-            <input type="text" placeholder="Add a comment" id="new_comment">
+            <input type="text" placeholder="Add a small comment" id="new_comment">
         </div>
         <div class="close_button">
             Close
@@ -109,7 +109,9 @@ function create_pin(details){
     </aside>
     <div class ="modal_pin">
         <div class ="modal_head">
-            <div class ="save_card"> Save </div>
+            <div class ="save_card">
+                <a href="${details.img_blob}" download="${details.title}">Save</a> 
+            </div>
         </div>
         <div class ="modal_foot">
             <div class ="destination">
@@ -129,9 +131,9 @@ function create_pin(details){
 
             <select name="size_choice" id="size_choice">
                 <option value="" disabled selected>Select</option>
-                <option value="small" selected>Small</option>
-                <option value="medium" selected>Medium</option>
-                <option value="large" selected>Large</option>
+                <option value="small" selected>S</option>
+                <option value="medium" selected>M</option>
+                <option value="large" selected>L</option>
             </select>
         </div>
     </div>
@@ -202,7 +204,8 @@ function m_reset() {
 //Pin features
 document.querySelector('#send').addEventListener('click', () => {
     document.querySelector('.comments_section').style.opacity = 1;
-    const pin = document.querySelector("#send").parentElement.parentElement.parentElement.parentElement ; 
+    const pin = document.querySelector("#send").parentElement.parentElement.parentElement.parentElement;
+    console.log(pin) 
     add_comment(pin);
 });
 
@@ -222,9 +225,9 @@ function create_preview(modal, details) {
     preview.classList.add('.preview_text');
     const section3 = modal.children[0].children[0].children[1];
     // console.log(section3);
-    section3.children[0].children[0].style.opacity = 0 ;
+    section3.children[0].children[0].style.display = "none" ;
     preview.style.width = '280px'; 
-    section3.children[0].appendChild(preview);
+    section3.children[0].insertBefore(preview, section3.children[0].children[0]);
 };
 
 function change_size(pin) {
