@@ -1,4 +1,5 @@
 const add_pin_modal = document.querySelector('.add_pin_modal');
+var blabla = 0;
 document.querySelector('.add_pin').addEventListener('click', () => {
     add_pin_modal.style.opacity = 1;
     add_pin_modal.style.pointerEvents = 'all';
@@ -15,6 +16,7 @@ add_pin_modal.children[0].children[1].children[2].children[0].addEventListener('
         pin_size: document.querySelector("#pin_size").value
     };
     create_preview(add_pin_modal, users_data);
+    blabla = 1;
 
 });
 
@@ -79,8 +81,10 @@ document.querySelector(".pin_save").addEventListener('click', () => {
     m_reset();
     const section3 = add_pin_modal.children[0].children[0].children[1];
     console.log(users_data.img_blob);
-    section3.children[0].removeChild(section3.children[0].children[0]);
-    section3.children[0].children[0].style.display = "flex";
+    if (blabla === 1) {
+        section3.children[0].removeChild(section3.children[0].children[0]);
+        section3.children[0].children[0].style.display = "flex";
+    }
 });
  
 function create_pin(details){
@@ -122,7 +126,7 @@ function create_pin(details){
             </div>
 
             <div class = "icon_pint_container">
-                <img src="../images/icons/send.png" alt= "send" class="icon_pint" id="send" >
+                <img src="../images/icons/comment.png" alt= "send" class="icon_pint" id="send" >
             </div>
 
             <div class = "icon_pint_container">

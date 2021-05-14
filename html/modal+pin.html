@@ -20,8 +20,9 @@
       </div>
 
       <div class='explanation_text'>
-        <p>Little Text to explain the website</p>
-        <p>This is a gallery website, you may add an item by pressing the + on the right side, you can then display pictures in different sizes and describe them in different ways.
+        <p>Welcome to our CSE104 final project website ! </p>
+        <p>This is a gallery website, you may add an item by pressing the + on the right side, you can then display pictures in different sizes and describe them in different ways. <br>
+          Various features have been implemented so feel free to click and hover around in order to find them all. 
         </p>
 
       </div>
@@ -34,7 +35,7 @@
     </div>
     
     <div class="container_pin">
-      <div class ="card card_large">
+      <!-- <div class ="card_example card_large">
         <div class ="title_pin">First Pin</div>
         <aside class="comments_section">
           <h1>Last comments</h1>
@@ -48,7 +49,7 @@
               Close
           </div>
         </aside>
-        <div class ="modal_pin">
+        <div class ="modal_pin_example">
           <div class ="modal_head">
             <div class ="save_card"> Save </div>
           </div>
@@ -86,7 +87,7 @@
             <p>This pin was made by lalalal</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- <div class="card card_medium">
         <div class ="title_pin"></div>
@@ -157,7 +158,12 @@
                     <img src="../images/icons/arrow.png" alt= "img_upload" class= "icon_pint" >
                   </div> 
                   <div>Click to upload</div>
-                  <div>Recommendation: recommendation goes here</div>
+                  <br>
+                  <div>
+                    Recommendation: use a size that corresponds to the original size of your image. <br><br>
+                    <span style="font-style: italic;"> (If a wrong size is picked, the image will display but some features might be slightly off).</span>
+
+                  </div>
                 </div>
               </div>
               <input type="file" name="img_upload" id="img_upload" >
@@ -195,7 +201,7 @@
           <div class="section2">
             <input type="text" placeholder="Add your title" class="new_pin_input" id='pin_title'>
             <input type="text" placeholder="What is this pin about?" class="new_pin_input" id='description_pin'>
-            <input  type="text" placeholder="Where do you want your pin to go?" class="new_pin_input" id='destination_pin'>
+            <input  type="text" placeholder="In which collection do you want your pin to go?" class="new_pin_input" id='destination_pin'>
             <input type="text" placeholder="Enter your name" class="new_pin_input" id="authors_name">
           </div>
           <div class="section3">
@@ -205,5 +211,15 @@
       </div>
     </div>
     <script src="../js/modal+pin.js" defer></script>
+
+    <footer id="sp-footer">
+      <br>
+      <p> 
+        © 2021 JOHANNA ULIN & JOHN LEVY CSE104 ©
+        <br>
+        <br>
+        All rights reserved
+      </p>
+    </footer>
   </body>
 </html>

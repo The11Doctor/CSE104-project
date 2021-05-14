@@ -28,12 +28,12 @@
   width: 60%;
   height: 75%;
   position: absolute;
-  top: 35%;
-  left: 35%;
+  top: 36%;
+  left: 32%;
   transform: translate(-50%, -50%);
 
   z-index: 9999;
-  background-color: rgba(0,0,0,0.1);
+  /* background-color: rgba(0,0,0,0.1); */
 
   opacity: 0;
   transition-duration: 0.3s;
@@ -124,8 +124,8 @@
   cursor: pointer;
   font-size: 8px;     
   font-weight: 700;
-
 }
+
 .image_pin img{
   max-height: 100%;
 } 
@@ -218,6 +218,7 @@
 }
 
 .add_comment{
+  margin-right: 2px;
   width: 100px;
   padding: 2px;
   /* margin-top: 200%; */

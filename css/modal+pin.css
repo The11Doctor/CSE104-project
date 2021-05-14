@@ -18,10 +18,9 @@
 
 .nav_bar{
   position: fixed;
-  top:7;
-  width:100%;
-  height:10%;
-
+  top: 7;
+  width: 100%;
+  height: 10%;
 }
 
 .nav_bar .add_pin{
@@ -43,13 +42,12 @@
   opacity: 0;
   pointer-events: none;
   transition-duration: 0.4s;
-  
 }
 
 .container_pin {
   margin: 0;
   padding: 0;
-  width: 80vw;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--card_width));
   grid-auto-rows: 10px;
@@ -81,16 +79,132 @@
 }
 
 .explanation_text{
-  background-color: rgba(0.0.0.1);
+  background-color: #d3d3d3;
   border-radius: 16px;
   padding: 5px;
 }
 
 .explanation_text p{
-  color: whitesmoke;
+  color: black;
 }
 
 .image_pin img{
-  width: 220px;
+  width: 200px;
+}
+
+.card_example:hover .description_box {
+  display: flex;
+  opacity: 1;
+}
+
+.modal_pin_example:hover {
+  opacity: 1;
+}
+
+.modal_pin_example {
+  width: 240px;
+  height: 330px;
+  position: absolute;
+  top: 67%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+
+  z-index: 9999;
+  /* background-color: rgba(0,0,0,0.1); */
+
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+.modal_pin_example .modal_head {
+  width: 100%;
+  height: 15%;
+  position: fixed;
+  top: 1%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal_pin_example .modal_foot {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  left:0%;
+  bottom: 4%;
+  display: flex;
+  justify-content: space-evenly ;
+  align-items: center;
+  margin-left: 2px;
+}
+ .modal_pin_example .modal_head .save_card{
+  margin-right: 20px;
+  margin-top: 10px;
+  width: 40px;
+  height:38px;
+  border-radius: 20px;
+  border: 1px rgba(0.0.0.0,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+  color: white;
+  background-color: rgba(0.0.0.1);
+  cursor:pointer;
+}
+
+.modal_pin_example .modal_head .save_card a{
+  text-decoration: none;
+  color: white;
+}
+
+.modal_pin_example .modal_head .save_card a:visited{
+  color: white;
+}
+
+.modal_pin_example .modal_head .save_card a:active{
+  color: rgb(99, 52, 99);
+}
+
+.example .icon_pint_container{
+  width: 11%;
+  height: 11%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  cursor:pointer;
+  flex-shrink: 0;
+}
+
+.example .modal_pin .modal_foot .destination span{
+  overflow: hidden;
+}
+
+.example .modal_pin .modal_foot .destination{
+  width: 70px;
+  height: 32px;
+  border-radius: 18px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  font-size: 8px;     
+  font-weight: 700;
+}
+
+#sp-footer {
+  background: rgb(65, 67, 224);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  /* border-radius: 9px; */
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
 }
 
