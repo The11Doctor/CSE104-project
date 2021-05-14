@@ -80,10 +80,12 @@ document.querySelector(".pin_save").addEventListener('click', () => {
     create_pin(users_data);
     m_reset();
     const section3 = add_pin_modal.children[0].children[0].children[1];
-    console.log(users_data.img_blob);
+    // console.log(users_data.img_blob);
+    console.log(blabla);
     if (blabla === 1) {
         section3.children[0].removeChild(section3.children[0].children[0]);
         section3.children[0].children[0].style.display = "flex";
+        blabla = 0;
     }
 });
  
@@ -206,19 +208,19 @@ function m_reset() {
 }
 
 //Pin features
-document.querySelector('#send').addEventListener('click', () => {
-    document.querySelector('.comments_section').style.opacity = 1;
-    const pin = document.querySelector("#send").parentElement.parentElement.parentElement.parentElement;
-    console.log(pin) 
-    add_comment(pin);
-});
+// document.querySelector('#send').addEventListener('click', () => {
+//     document.querySelector('.comments_section').style.opacity = 1;
+//     const pin = document.querySelector("#send").parentElement.parentElement.parentElement.parentElement;
+//     console.log(pin) 
+//     add_comment(pin);
+// });
 
-document.querySelector('#dots').addEventListener('click', () => {
-    document.querySelector("#size_choice").style.opacity = 1;
-    const pin = document.querySelector("#dots").parentElement.parentElement.parentElement.parentElement; 
-    console.log(pin);
-    change_size(pin);
-});
+// document.querySelector('#dots').addEventListener('click', () => {
+//     document.querySelector("#size_choice").style.opacity = 1;
+//     const pin = document.querySelector("#dots").parentElement.parentElement.parentElement.parentElement; 
+//     console.log(pin);
+//     change_size(pin);
+// });
 
 
 function create_preview(modal, details) {
